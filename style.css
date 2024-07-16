@@ -8,6 +8,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "freight big pro";
+
 }
 html,
 body {
@@ -24,8 +25,9 @@ body {
   text-align: center;
 }
 #page1 h1 {
-    font-size: 6vw;
-    line-height: 6vw;
+  font-size: 15vh;
+  font-weight: 200;
+    line-height: 7vw;
 }
 #page2 {
   width: 100%;
