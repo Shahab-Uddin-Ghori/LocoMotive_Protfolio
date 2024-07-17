@@ -49,7 +49,7 @@ body {
   height: 100%;
   width: 100%;
   position: absolute;
-  background-color: rgba(0, 0, 0, 0.947);
+  background-color: #f5e41b;
   z-index: 8;
   display: flex;
   justify-content: center;
@@ -60,6 +60,9 @@ body {
 #yellow1 svg {
   width: 40rem;
   height: 10rem;
+}
+#yellow1 svg path{
+fill: black;
 }
 #yellow2 {
   height: 100%;
@@ -72,10 +75,14 @@ body {
 #nav{
   position: absolute;
   width: 100%;
-  padding: 20px 4px;
+  padding: 30px 50px;
   z-index: 10;
   background-color: red;
    
+}
+
+#nav svg path{
+  fill: black;
 }
 
 #page1 {
