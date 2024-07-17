@@ -15,6 +15,10 @@ body {
   height: 100%;
 }
 
+#main {
+  background-color: #000;
+}
+
 #loader {
   height: 100vh;
   width: 100%;
@@ -26,6 +30,7 @@ body {
   align-items: center;
   text-align: center;
   z-index: 99;
+  display: none;
 }
 
 #loader h1 {
@@ -61,8 +66,8 @@ body {
   width: 40rem;
   height: 10rem;
 }
-#yellow1 svg path{
-fill: black;
+#yellow1 svg path {
+  fill: black;
 }
 #yellow2 {
   height: 100%;
@@ -72,16 +77,15 @@ fill: black;
   z-index: 7;
 }
 
-#nav{
+#nav {
   position: absolute;
   width: 100%;
   padding: 30px 50px;
   z-index: 10;
   background-color: red;
-   
 }
 
-#nav svg path{
+#nav svg path {
   fill: black;
 }
 
@@ -104,7 +108,68 @@ fill: black;
   width: 100%;
   height: 100vh;
   background-color: black;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
+
+.elem {
+  width: 100%;
+  position: relative;
+  /* background-color: rgb(255, 0, 0); */
+}
+.elem h2 {
+  font-size: 7.5vw;
+  line-height: 5.5vw;
+  text-transform: uppercase;
+  font-weight: 100;
+  position: relative;
+  z-index: 9;
+}
+.moving {
+  background-color: #f5e41b;
+  width: 100%;
+  white-space: nowrap;
+  padding: 8px 0;
+  position: absolute;
+  top: 50%;
+  transform: translate(0,-50%);
+}
+.moving-in {
+  display: inline-block;
+  white-space: nowrap;
+  animation-name: moving;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+
+}
+ h5{
+  color: #000;
+  display: inline-block;
+  font-size: 19px;
+  font-weight: 500;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-transform: uppercase;
+  margin-right: 35px;
+}
+
+@keyframes moving {
+  from{
+    transform: translateX(0);
+  }
+  to{
+    transform: translateX(-100%);
+  }
+}
+
+
+
+
+
 #page3 {
   width: 100%;
   height: 100vh;
