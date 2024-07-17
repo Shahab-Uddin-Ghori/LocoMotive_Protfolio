@@ -1,6 +1,6 @@
 @font-face {
-    font-family: freight big pro;
-    src: url(./Freight\ Big\ Pro\ Light\ Italic.otf);
+  font-family: freight big pro;
+  src: url(.//Freight\ Big\ Pro\ Light.otf);
 }
 
 * {
@@ -8,13 +8,76 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "freight big pro";
-
 }
 html,
 body {
   width: 100%;
   height: 100%;
 }
+
+#loader {
+  height: 100vh;
+  width: 100%;
+  background-color: black;
+  position: fixed;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 99;
+}
+
+#loader h1 {
+  font-size: 14vh;
+  font-weight: 100;
+  line-height: 5vw;
+  letter-spacing: -3px;
+  position: relative;
+  z-index: 9;
+}
+
+#loader video {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  object-fit: cover;
+  z-index: 6;
+}
+
+#yellow1 {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.947);
+  z-index: 8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#yellow1 svg {
+  width: 40rem;
+  height: 10rem;
+}
+#yellow2 {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-color: #f5e41b;
+  z-index: 7;
+}
+
+#nav{
+  position: absolute;
+  width: 100%;
+  padding: 20px 4px;
+  z-index: 10;
+  background-color: red;
+   
+}
+
 #page1 {
   width: 100%;
   height: 100vh;
@@ -25,9 +88,10 @@ body {
   text-align: center;
 }
 #page1 h1 {
-  font-size: 15vh;
-  font-weight: 200;
-    line-height: 7vw;
+  font-size: 14vh;
+  font-weight: 100;
+  line-height: 5vw;
+  letter-spacing: -3px;
 }
 #page2 {
   width: 100%;
