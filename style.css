@@ -51,6 +51,18 @@ body {
   z-index: 6;
 }
 
+#loader #nav{
+  position: absolute;
+  width: 100%;
+  padding: 15px 0 0 72px;
+  z-index: 10;
+  top: 0;
+  left: -45.35%;
+}
+#loader #nav svg path{
+fill: #fff;
+}
+
 #yellow1 {
   height: 100%;
   width: 100%;
@@ -63,13 +75,6 @@ body {
   text-align: center; */
 }
 
-#yellow1 svg {
-  width: 40rem;
-  height: 10rem;
-}
-#yellow1 svg path {
-  fill: black;
-}
 #yellow2 {
   height: 100%;
   width: 100%;
@@ -81,11 +86,14 @@ body {
 #nav {
   position: absolute;
   width: 100%;
-  padding: 30px 50px;
+  padding: 15px 0 0 72px ;
   z-index: 10;
-  background-color: red;
+  /* background-color: red; */
 }
-
+#nav svg {
+  width: 7rem;
+  height: 5rem;
+}
 #nav svg path {
   fill: black;
 }

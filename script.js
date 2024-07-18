@@ -3,8 +3,8 @@ const loading = () => {
 
   tl.to("#yellow1", {
     top: "-100%",
-    delay: 0.5,
-    duration: 0.7,
+    delay: 0.4,
+    duration: 0.4,
     ease: "expo.out",
   });
 
