@@ -4,7 +4,7 @@ const loading = () => {
   tl.to("#yellow1", {
     top: "-100%",
     delay: 0.5,
-    duration: 0.5,
+    duration: 0.7,
     ease: "expo.out",
   });
 
@@ -12,8 +12,8 @@ const loading = () => {
     "#yellow2",
     {
       top: "100%",
-      delay: 3,
-      duration: 0.5,
+      delay: .5,
+      duration: 0.7,
       ease: "expo.out",
     },
     "anima"
@@ -21,14 +21,15 @@ const loading = () => {
   tl.to(
     "#loader h1",
     {
-      delay: 0.1,
-      duration: 0.5,
+      delay: 0.6,
+      duration: 0.7,
       color: "black",
     },
     "anima"
   );
   tl.to("#loader", {
     display: "none ",
+    opacity:0,
   });
 };
 loading();
@@ -38,3 +39,16 @@ const scroll = new LocomotiveScroll({
   smooth: true,
   lerp: 0.08,
 });
+
+
+let elem = document.querySelectorAll(".elem")
+let page2 = document.querySelector("#page2")
+
+elem.forEach((ele)=>{
+    ele.addEventListener("mouseenter",()=>{
+        let bgImg = ele.getAttribute("data-img")
+        page2.style.backgroundImage = `url(${bgImg})`
+        // console.log(page2);
+        // console.log(bgImg);
+    })
+})

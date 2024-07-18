@@ -30,7 +30,7 @@ body {
   align-items: center;
   text-align: center;
   z-index: 99;
-  display: none;
+  /* display: none; */
 }
 
 #loader h1 {
@@ -40,6 +40,7 @@ body {
   letter-spacing: -3px;
   position: relative;
   z-index: 9;
+  
 }
 
 #loader video {
@@ -56,10 +57,10 @@ body {
   position: absolute;
   background-color: #f5e41b;
   z-index: 8;
-  display: flex;
+  /* display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
+  text-align: center; */
 }
 
 #yellow1 svg {
@@ -108,6 +109,8 @@ body {
   width: 100%;
   height: 100vh;
   background-color: black;
+  background-size: cover;
+  background-position: center;
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -121,6 +124,19 @@ body {
   position: relative;
   cursor: pointer;
   /* background-color: rgb(255, 0, 0); */
+}
+.blur{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  width: 30%;
+  height: 100%;
+  background: linear-gradient(to right,#f5e31bf1,#f5e41b,#f5e31bf1);
+  box-shadow: 10px 0 20px 20px #f5e41b;
+  /* background-color: #f5e41b; */
+  z-index: 8;
+
 }
 .elem h2 {
   font-size: 5vw;
@@ -139,6 +155,7 @@ body {
   top: 50%;
   transform: translate(0,-45%) scaleY(0);
   transition: all ease .3s;
+  overflow: hidden;
 }
 .moving-in {
   display: inline-block;
@@ -152,7 +169,7 @@ body {
  h5{
   color: #000;
   display: inline-block;
-  font-size: 19px;
+  font-size: 17px;
   font-weight: 500;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   text-transform: uppercase;
@@ -180,6 +197,7 @@ opacity: 1;
 }
 .elem:hover h2{
   font-style: italic;
+  color: #000;
   }
 
 #page3 {
