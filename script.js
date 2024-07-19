@@ -1,3 +1,5 @@
+
+// gsap animation function 
 const loading = () => {
   let tl = gsap.timeline();
 
@@ -34,24 +36,65 @@ const loading = () => {
 };
 loading();
 
-const scroll = new LocomotiveScroll({
-  el: document.querySelector("#main"),
-  smooth: true,
-  lerp: 0.08,
-});
+const loco = () => {
+  const scroll = new LocomotiveScroll({
+    el: document.querySelector("#main"),
+    smooth: true,
+    lerp: 0.08,
+  });
+  
+  document.querySelector("#footer h2").addEventListener("click",() =>{
+    scroll.scrollTo(0);
+  })
+  
+  let elem = document.querySelectorAll(".elem")
+  let page2 = document.querySelector("#page2")
+  
+  elem.forEach((ele)=>{
+      ele.addEventListener("mouseenter",()=>{
+          let bgImg = ele.getAttribute("data-img")
+          page2.style.backgroundImage = `url(${bgImg})`
+      })
+  })
+}
+loco()
 
 
-let elem = document.querySelectorAll(".elem")
-let page2 = document.querySelector("#page2")
 
-elem.forEach((ele)=>{
-    ele.addEventListener("mouseenter",()=>{
-        let bgImg = ele.getAttribute("data-img")
-        page2.style.backgroundImage = `url(${bgImg})`
-        // console.log(page2);
-        // console.log(bgImg);
-    })
-})
+// function for adjust columns
+const imgAdj = () => {
+  document.addEventListener('DOMContentLoaded', () => {
+    const imgDivs = document.querySelectorAll('.img-div');
+    const baseHeight = 35; // Base height in vw
+    const heightVariation = 1; // Minor height variation in vw
+    
+    imgDivs.forEach((imgDiv, index) => {
+      const rowIndex = Math.floor(index / 3);
+      const posInRow = index % 3;
+  
+      if (rowIndex % 2 === 0) {
+        // For even rows (1, 3, 5, ...)
+        if (posInRow === 0) {
+          imgDiv.style.height = `${baseHeight + heightVariation}vw`;
+        } else if (posInRow === 1) {
+          imgDiv.style.height = `${baseHeight - heightVariation}vw`;
+        } else {
+          imgDiv.style.height = `${baseHeight + heightVariation}vw`;
+        }
+      } else {
+        // For odd rows (2, 4, 6, ...)
+        if (posInRow === 0) {
+          imgDiv.style.height = `${baseHeight - heightVariation}vw`;
+        } else if (posInRow === 1) {
+          imgDiv.style.height = `${baseHeight + heightVariation}vw`;
+        } else {
+          imgDiv.style.height = `${baseHeight - heightVariation}vw`;
+        }
+      }
+    });
+  });
+}
+imgAdj()
 
 // document.addEventListener('DOMContentLoaded', () => {
 //   const imgDivs = document.querySelectorAll('.img-div');
@@ -64,34 +107,3 @@ elem.forEach((ele)=>{
 //     imgDiv.style.width = `${randomWidth}vw`;
 //   });
 // });
-document.addEventListener('DOMContentLoaded', () => {
-  const imgDivs = document.querySelectorAll('.img-div');
-  const baseHeight = 35; // Base height in vw
-  const heightVariation = 1; // Minor height variation in vw
-
-  imgDivs.forEach((imgDiv, index) => {
-    const rowIndex = Math.floor(index / 3);
-    const posInRow = index % 3;
-
-    if (rowIndex % 2 === 0) {
-      // For even rows (1, 3, 5, ...)
-      if (posInRow === 0) {
-        imgDiv.style.height = `${baseHeight + heightVariation}vw`;
-      } else if (posInRow === 1) {
-        imgDiv.style.height = `${baseHeight - heightVariation}vw`;
-      } else {
-        imgDiv.style.height = `${baseHeight + heightVariation}vw`;
-      }
-    } else {
-      // For odd rows (2, 4, 6, ...)
-      if (posInRow === 0) {
-        imgDiv.style.height = `${baseHeight - heightVariation}vw`;
-      } else if (posInRow === 1) {
-        imgDiv.style.height = `${baseHeight + heightVariation}vw`;
-      } else {
-        imgDiv.style.height = `${baseHeight - heightVariation}vw`;
-      }
-    }
-  });
-});
-

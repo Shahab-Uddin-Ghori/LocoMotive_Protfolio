@@ -1,271 +1,303 @@
 @font-face {
-  font-family: freight big pro;
-  src: url(.//Freight\ Big\ Pro\ Light.otf);
+  /* Defines a custom font "freight big pro" using the specified .otf file */
+  font-family: "freight big pro";
+  src: url(./Freight\ Big\ Pro\ Light.otf);
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "freight big pro";
+  margin: 0; /* Removes default margin from all elements */
+  padding: 0; /* Removes default padding from all elements */
+  box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
+  font-family: "freight big pro"; /* Sets the default font for the page */
 }
+
 html,
 body {
-  width: 100%;
-  height: 100%;
+  width: 100%; /* Ensures the html and body elements take up full width of the viewport */
+  height: 100%; /* Ensures the html and body elements take up full height of the viewport */
 }
 
 #main {
-  background-color: #000;
+  background-color: #000; /* Sets a black background color for the main container */
 }
 
 #loader {
-  height: 100vh;
-  width: 100%;
-  background-color: black;
-  position: fixed;
-  color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  z-index: 99;
-  display: none;
+  height: 100vh; /* Makes the loader full viewport height */
+  width: 100%; /* Makes the loader full viewport width */
+  background-color: black; /* Sets background color to black */
+  position: fixed; /* Fixes the loader position relative to the viewport */
+  color: #fff; /* Sets text color to white */
+  display: flex; /* Uses flexbox to center content */
+  justify-content: center; /* Centers content horizontally */
+  align-items: center; /* Centers content vertically */
+  text-align: center; /* Centers text inside the loader */
+  z-index: 99; /* Places the loader above most other elements */
+  /* display: none; Initially hides the loader */
 }
 
 #loader h1 {
-  font-size: 14vh;
-  font-weight: 100;
-  line-height: 5vw;
-  letter-spacing: -3px;
-  position: relative;
-  z-index: 9;
-  
+  font-size: 6.9vw; /* Sets the font size relative to viewport width */
+  font-weight: 100; /* Makes the font weight light */
+  line-height: 5.5vw; /* Sets the line height relative to viewport width */
+  letter-spacing: .08vw; /* Adjusts spacing between letters */
+  position: relative; /* Allows positioning relative to the loader container */
+  z-index: 9; /* Ensures the heading text is above other loader content */
 }
 
 #loader video {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  object-fit: cover;
-  z-index: 6;
+  width: 100%; /* Makes the video fill the loader container */
+  height: 100%; /* Makes the video fill the loader container */
+  position: absolute; /* Positions the video absolutely within the loader */
+  object-fit: cover; /* Ensures the video covers the entire container without distortion */
+  z-index: 6; /* Places the video behind other loader elements */
 }
 
-#loader #nav{
-  position: absolute;
-  width: 100%;
-  padding: 15px 0 0 72px;
-  z-index: 10;
-  top: 0;
-  left: -45.35%;
-}
-#loader #nav svg path{
-fill: #fff;
+#loader #nav svg {
+  width: 5vw; /* Sets the width of the SVG relative to the viewport width */
+  height: 5vw; /* Sets the height of the SVG relative to the viewport width */
 }
 
-#yellow1 {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  background-color: #f5e41b;
-  z-index: 8;
+#loader #nav {
+  position: absolute; /* Positions navigation absolutely within the loader */
+  width: 100%; /* Makes the navigation full width */
+  padding: 15px 0 0 72px; /* Adds padding to the top and left */
+  z-index: 10; /* Places navigation above the video */
+  top: 0; /* Aligns the navigation to the top of the loader */
+  left: -45.35%; /* Offsets the navigation to the left */
 }
 
-#yellow2 {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  background-color: #f5e41b;
-  z-index: 7;
+#loader #nav svg path {
+  fill: #fff; /* Sets the color of SVG paths inside the loader to white */
+}
+
+
+#yellow1, #yellow2 {
+  height: 100%; /* Makes the yellow overlay elements full height */
+  width: 100%; /* Makes the yellow overlay elements full width */
+  position: absolute; /* Positions them absolutely within the loader */
+  background-color: #f5e41b; /* Sets a yellow background color */
+  z-index: 8; /* Ensures yellow overlays are behind the heading */
 }
 
 #nav {
-  position: absolute;
-  width: 100%;
-  padding: 15px 0 0 72px ;
-  z-index: 10;
-  /* background-color: red; */
-}
-#nav svg {
-  width: 7rem;
-  height: 5rem;
-}
-#nav svg path {
-  fill: black;
+  position: absolute; /* Positions navigation absolutely */
+  width: 5vw; /* Sets the width of the SVG relative to viewport width */
+  height: 5vw; /* Sets the height of the SVG relative to viewport width */
+  padding: 15px 0 0 72px; /* Adds padding to the top and left (adjust as needed) */
+  z-index: 10; /* Places navigation above other elements */
+  /* Adjust positioning as needed */
 }
 
+#nav svg {
+  width: 5vw; /* Sets SVG width relative to viewport width */
+  height: 5vw; /* Sets SVG height relative to viewport width */
+}
+
+#nav svg path {
+  fill: black; /* Sets the color of SVG paths outside the loader to black */
+}
+
+
 #page1 {
-  width: 100%;
-  height: 100vh;
-  background-color: #f5e41b;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  width: 100%; /* Makes the page full width */
+  height: 100vh; /* Makes the page full viewport height */
+  background-color: #f5e41b; /* Sets a yellow background color */
+  display: flex; /* Uses flexbox to center content */
+  justify-content: center; /* Centers content horizontally */
+  align-items: center; /* Centers content vertically */
+  text-align: center; /* Centers text inside the page */
 }
+
 #page1 h1 {
-  font-size: 14vh;
-  font-weight: 100;
-  line-height: 5vw;
-  letter-spacing: -3px;
+  font-size: 6.9vw; /* Sets the font size relative to viewport width */
+  font-weight: 100; /* Makes the font weight light */
+  line-height: 5.5vw; /* Sets the line height relative to viewport width */
+  letter-spacing: .08vw; /* Adjusts spacing between letters */
 }
+
 #page2 {
-  width: 100%;
-  height: 100vh;
-  background-color: black;
-  background-size: cover;
-  background-position: center;
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  width: 100%; /* Makes the page full width */
+  height: 100vh; /* Makes the page full viewport height */
+  background-color: black; /* Sets a black background color */
+  background-size: cover; /* Ensures background covers the entire container */
+  background-position: center; /* Centers the background image */
+  color: #fff; /* Sets text color to white */
+  display: flex; /* Uses flexbox to center content */
+  flex-direction: column; /* Stacks children vertically */
+  justify-content: center; /* Centers content vertically */
+  align-items: center; /* Centers content horizontally */
+  text-align: center; /* Centers text inside the page */
 }
 
 .elem {
-  width: 100%;
-  position: relative;
-  cursor: pointer;
-  /* background-color: rgb(255, 0, 0); */
+  width: 100%; /* Makes the element full width */
+  position: relative; /* Allows positioning of child elements */
+  cursor: pointer; /* Shows a pointer cursor on hover */
 }
-.blur{
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%,-50%);
-  width: 30%;
-  height: 100%;
-  background: linear-gradient(to right,#f5e31bf1,#f5e41b,#f5e31bf1);
-  box-shadow: 10px 0 20px 20px #f5e41b;
-  /* background-color: #f5e41b; */
-  z-index: 8;
 
+.blur {
+  position: absolute; /* Positions blur effect absolutely */
+  left: 50%; /* Centers the blur effect horizontally */
+  top: 50%; /* Centers the blur effect vertically */
+  transform: translate(-50%, -50%); /* Centers the blur effect precisely */
+  width: 30%; /* Sets width to 30% of the parent */
+  height: 100%; /* Makes the blur effect full height */
+  background: linear-gradient(to right, #f5e31bf1, #f5e41b, #f5e31bf1); /* Creates a gradient effect */
+  box-shadow: 10px 0 20px 20px #f5e41b; /* Adds a yellow shadow */
+  z-index: 8; /* Places blur effect behind other elements */
 }
+
 .elem h2 {
-  font-size: 5vw;
-  line-height: 4vw;
-  text-transform: uppercase;
-  font-weight: 100;
-  position: relative;
-  z-index: 9;
+  font-size: 5vw; /* Sets the font size relative to viewport width */
+  line-height: 4vw; /* Sets the line height relative to viewport width */
+  text-transform: uppercase; /* Transforms text to uppercase */
+  font-weight: 100; /* Makes the font weight light */
+  position: relative; /* Allows positioning relative to .elem */
+  z-index: 9; /* Ensures heading is above the blur effect */
 }
-.moving {
-  background-color: #f5e41b;
-  width: 100%;
-  white-space: nowrap;
-  padding: 8px 0;
-  position: absolute;
-  top: 50%;
-  transform: translate(0,-45%) scaleY(0);
-  transition: all ease .3s;
-  overflow: hidden;
-}
-.moving-in {
-  display: inline-block;
-  white-space: nowrap;
-  animation-name: moving;
-  animation-duration: 10s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
 
+.moving {
+  background-color: #f5e41b; /* Sets a yellow background color */
+  width: 100%; /* Makes the moving element full width */
+  white-space: nowrap; /* Prevents text from wrapping */
+  padding: 8px 0; /* Adds vertical padding */
+  position: absolute; /* Positions moving element absolutely */
+  top: 50%; /* Centers vertically */
+  transform: translate(0, -45%) scaleY(0); /* Transforms to hide initially */
+  transition: all ease .3s; /* Smooth transition for changes */
+  overflow: hidden; /* Hides overflow content */
 }
- h5{
-  color: #000;
-  display: inline-block;
-  font-size: 17px;
-  font-weight: 500;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  text-transform: uppercase;
-  margin-right: 35px;
-  opacity: 0;
-  transition: all ease .3s;
-  transition-delay: .3s;
+
+.moving-in {
+  display: inline-block; /* Makes the element inline-block for animation */
+  white-space: nowrap; /* Prevents text from wrapping */
+  animation-name: moving; /* Applies animation */
+  animation-duration: 10s; /* Sets animation duration */
+  animation-iteration-count: infinite; /* Makes animation repeat forever */
+  animation-timing-function: linear; /* Sets animation timing to linear */
+}
+
+h5 {
+  color: #000; /* Sets text color to black */
+  display: inline-block; /* Makes the text inline-block */
+  font-size: 1vw; /* Sets font size relative to viewport width */
+  font-weight: 500; /* Sets font weight */
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* Sets font family */
+  text-transform: uppercase; /* Transforms text to uppercase */
+  margin-right: 2vw; /* Adds margin to the right relative to viewport width */
+  opacity: 0; /* Initially hides text */
+  transition: all ease .3s; /* Smooth transition for changes */
+  transition-delay: .3s; /* Adds a delay before transition starts */
 }
 
 @keyframes moving {
-  from{
-    transform: translateX(0);
+  from {
+    transform: translateX(0); /* Starts animation from initial position */
   }
-  to{
-    transform: translateX(-100%);
+  to {
+    transform: translateX(-100%); /* Ends animation by moving left */
   }
 }
 
-.elem:hover .moving{
-  transform: translate(0,-45%) scaleY(1);
+.elem:hover .moving {
+  transform: translate(0, -45%) scaleY(1); /* Shows the moving element on hover */
+}
 
+.elem:hover .moving h5 {
+  opacity: 1; /* Shows text on hover */
 }
-.elem:hover .moving h5{
-opacity: 1;
+
+.elem:hover h2 {
+  font-style: italic; /* Makes the font italic on hover */
+  color: #000; /* Changes text color to black */
 }
-.elem:hover h2{
-  font-style: italic;
-  color: #000;
-  }
 
 #page3 {
-  width: 100%;
-  min-height: 100vh;
-  background-color: white;
+  width: 100%; /* Makes the page full width */
+  min-height: 100vh; /* Ensures the page is at least full viewport height */
+  background-color: white; /* Sets a white background color */
 }
 
-.img-container{
-  width: 100%;
-  min-height: 100vh;
-  padding: 30px;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
+.img-container {
+  width: 100%; /* Makes the container full width */
+  min-height: 100vh; /* Ensures the container is at least full viewport height */
+  padding: 30px; /* Adds padding around the container */
+  display: flex; /* Uses flexbox for layout */
+  flex-wrap: wrap; /* Allows items to wrap to new lines */
+  align-items: flex-start; /* Aligns items to the start of the container */
 }
 
-.img-div{
-  margin: 20px;
-  height: 35vw;
-  width: 30vw;
-  /* background-color: red; */
-  position: relative;
-  overflow: hidden;
-}
-.img-div img{
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  transition: ease .3s;
+.img-div {
+  margin: 20px; /* Adds margin around each image container */
+  height: 35vw; /* Sets the height relative to viewport width */
+  width: 30vw; /* Sets the width relative to viewport width */
+  position: relative; /* Allows positioning of child elements */
+  overflow: hidden; /* Hides overflow content */
 }
 
-.overlay{
-  height: 100%;
-  width: 100%;
-  background-color: #00000038;
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: ease .5s;
-  z-index: 10;
+.img-div img {
+  height: 100%; /* Makes the image fill the container height */
+  width: 100%; /* Makes the image fill the container width */
+  object-fit: cover; /* Ensures the image covers the container without distortion */
+  transition: ease .3s; /* Smooth transition for changes */
+}
 
+.overlay {
+  height: 100%; /* Makes the overlay full height */
+  width: 100%; /* Makes the overlay full width */
+  background-color: #00000038; /* Semi-transparent black background */
+  position: absolute; /* Positions overlay absolutely within .img-div */
+  display: flex; /* Uses flexbox to center content */
+  justify-content: center; /* Centers content horizontally */
+  align-items: center; /* Centers content vertically */
+  transition: ease .5s; /* Smooth transition for changes */
+  z-index: 10; /* Places overlay above images */
 }
 
 .overlay p {
-  font-size: 3vw;
-  text-transform: uppercase;
-  text-align: center;
-  padding: 20px;
-  color: #fff;
-  line-height: 2.5vw;
-  opacity: 0;
-  transition-delay: .2s;
+  font-size: 3vw; /* Sets font size relative to viewport width */
+  text-transform: uppercase; /* Transforms text to uppercase */
+  text-align: center; /* Centers text inside the overlay */
+  padding: 20px; /* Adds padding around text */
+  color: #fff; /* Sets text color to white */
+  line-height: 2.5vw; /* Sets line height relative to viewport width */
+  opacity: 0; /* Initially hides text */
+  transition-delay: .2s; /* Adds a delay before the transition starts */
 }
 
-.img-div:hover .overlay{
-  background-color: #000;
-  cursor: pointer;
+.img-div:hover .overlay {
+  background-color: #000; /* Darkens the overlay background on hover */
+  cursor: pointer; /* Shows pointer cursor on hover */
 }
-.img-div:hover .overlay p{
- opacity: 1;
+
+.img-div:hover .overlay p {
+  opacity: 1; /* Shows text on hover */
 }
 
 .img-div:hover img {
-  scale: 1.05 ;
+  scale: 1.05; /* Slightly scales up the image on hover */
+}
+
+#footer{
+height: 40vh;
+width: 100%;
+background-color: #fff;
+display: flex;
+flex-direction: column;
+justify-content: flex-end;
+align-items: center;
+gap: 3rem ;
+}
+
+#footer h2{
+  font-family: gilroy;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-size: 2vw;
+}
+
+#foot{
+  height: 50%;
+  width: 100%;
+  background-color: #000;
 }
