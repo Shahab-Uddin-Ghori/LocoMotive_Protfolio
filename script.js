@@ -107,3 +107,32 @@ imgAdj()
 //     imgDiv.style.width = `${randomWidth}vw`;
 //   });
 // });
+let ul = document.querySelectorAll("ul li")
+let svg = document.querySelector(".core-logo")
+let toggle = document.querySelector("#toggle i")
+
+document.querySelector("#toggle i").addEventListener("click",()=>{
+  for (let i = 1; i<ul.length; i++){
+    ul[i].style.display = 'none'
+  }
+})
+
+document.querySelector("#toggle i").addEventListener("dblclick",()=>{
+  for (let i = 1; i<ul.length; i++){
+    ul[i].style.display = 'inline'
+  }
+})
+
+document.querySelector("#page1").addEventListener("click",()=>{
+  for (let i = 0; i<ul.length; i++){
+    ul[i].style.color = 'white'
+  }
+  toggle.style.color = 'white'
+  svg.style.fill = 'white'
+  console.log("ss");
+})
+document.querySelector("#page1").addEventListener("click",()=>{
+  for (let i = 1; i<ul.length; i++){
+    ul[i].style.display = 'none'
+  }
+})
