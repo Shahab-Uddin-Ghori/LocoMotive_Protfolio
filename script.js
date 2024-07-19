@@ -12,7 +12,7 @@ const loading = () => {
     "#yellow2",
     {
       top: "100%",
-      delay: .5,
+      delay: .3,
       duration: 0.7,
       ease: "expo.out",
     },
@@ -21,8 +21,8 @@ const loading = () => {
   tl.to(
     "#loader h1",
     {
-      delay: 0.6,
-      duration: 0.7,
+      delay: 0.3,
+      duration: 0.5,
       color: "black",
     },
     "anima"
