@@ -221,7 +221,7 @@ h5 {
 .img-container {
   width: 100%; /* Makes the container full width */
   min-height: 100vh; /* Ensures the container is at least full viewport height */
-  padding: 30px; /* Adds padding around the container */
+  padding: 20px; /* Adds padding around the container */
   display: flex; /* Uses flexbox for layout */
   flex-wrap: wrap; /* Allows items to wrap to new lines */
   align-items: flex-start; /* Aligns items to the start of the container */
