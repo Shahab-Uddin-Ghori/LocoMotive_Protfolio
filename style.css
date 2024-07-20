@@ -94,24 +94,24 @@ body {
   /* background-color: red; */
 }
 #left{
-  position:fixed;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 1rem;
+  /* position:fixed; */
   align-self:right ;
   margin-left: 60%;
+  /* background-color: red; */
+  /* width: 100%; */
 }
 
-#nav #left{
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 4vw;
-  /* background-color: blanchedalmond; */
-}
+
 #nav #left ul{
   display: flex;
   justify-content: flex-start;
   align-items: center;
   gap: 3vw;
   list-style: none;
+  transition: all ease .5s;
 }
 
 #nav #left ul li {
@@ -123,6 +123,7 @@ body {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 1vw;
   font-weight: 100;
+  transition: all ease .5s;
 }
 
 #nav #left ul li::after {
@@ -164,10 +165,13 @@ body {
   display: flex;
 }
 
+#toggle i{
+  transform: rotate(45deg);
+  cursor: pointer;
+}
 
 #toggle i:hover{
   cursor: pointer;
-  transform: rotate(45deg)
 }
 
 #page1 {

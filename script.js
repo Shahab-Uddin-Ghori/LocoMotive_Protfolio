@@ -111,28 +111,31 @@ let ul = document.querySelectorAll("ul li")
 let svg = document.querySelector(".core-logo")
 let toggle = document.querySelector("#toggle i")
 
-document.querySelector("#toggle i").addEventListener("click",()=>{
-  for (let i = 1; i<ul.length; i++){
-    ul[i].style.display = 'none'
-  }
-})
 
-document.querySelector("#toggle i").addEventListener("dblclick",()=>{
-  for (let i = 1; i<ul.length; i++){
-    ul[i].style.display = 'inline'
+let firstLi = ul[0];
+
+toggle.addEventListener("click", () => {
+  for (let i = 1; i < ul.length; i++) {
+    ul[i].style.display = (ul[i].style.display === 'none') ? 'block' : 'none';
+    if (ul[i].style.display === 'none') {
+      firstLi.style = `position:absolute;right:15vw;`
+      toggle.style = `transform: rotate(0deg)`
+    }
+    if (ul[i].style.display === 'block') {
+      firstLi.style = `position: relative;transition: all ease .5s;`
+      toggle.style = `transform: rotate(45deg)`
+    }
   }
-})
+});
 
 document.querySelector("#page1").addEventListener("click",()=>{
   for (let i = 0; i<ul.length; i++){
     ul[i].style.color = 'white'
+    
   }
+  
   toggle.style.color = 'white'
   svg.style.fill = 'white'
   console.log("ss");
 })
-document.querySelector("#page1").addEventListener("click",()=>{
-  for (let i = 1; i<ul.length; i++){
-    ul[i].style.display = 'none'
-  }
-})
+
